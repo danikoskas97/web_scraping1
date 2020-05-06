@@ -1,4 +1,3 @@
-# web_scraping1
 ## Web scraping first project 🚀
 
 you just need to uncomment all and run in the IDE or Terminal.
