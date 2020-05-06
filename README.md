@@ -9,4 +9,4 @@ with open('urls.txt', 'w') as file:
     for link in links:
         file.write(link + "\n")
 ```
-IF YOU LIKE IT STARS IT ⭐️
+If you like it STAR it ⭐️
