@@ -9,23 +9,6 @@ __doc__
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 '''
 source : http://example.webscraping.com/
 
