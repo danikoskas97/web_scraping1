@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import lxml
 import time
 __doc__
-
 # source : http://example.webscraping.com/
 # learned and apply with an youtube video
 '''
@@ -21,9 +20,8 @@ print(len(tds)) => give the number of td element in the html file
 #       <img src="/places/static/images/flags/ag.png"/>Antigua and Barbuda</a>
 #   </div>
 # </td>
-'''
-links = []
 
+links = []
 for i in range(26):
     url = 'http://example.webscraping.com/places/default/index/' + str(i)
     response = requests.get(url)
@@ -39,15 +37,11 @@ for i in range(26):
         time.sleep(2)
 
 print(len(links))
-
 with open('urls.txt', 'w') as file:
     for link in links:
         file.write(link + "\n")
 
 '''
-
-'''
-# url = 'http://example.webscraping.com/places/default/view/Yemen-250'
 with open('urls.txt', 'r') as inf:
     with open('pays.csv', 'w') as outf:
         outf.write('pays, \t\t\t\t population\n')

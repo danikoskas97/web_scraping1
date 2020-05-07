@@ -1,15 +1,31 @@
-## Web scraping first project 🚀
+# Web scraping first project 🚀
 
-you just need to uncomment only the code to delete urls.txt and run in the IDE or Terminal.
-i use pycharm so the .txt will be created in the folder that you work on it.
-after you run please comment this:
-
+## you just need to delete urls.txt and run in the IDE or Terminal.
+## i use pycharm so the .txt will be created in the folder that you work on it.
+## after you run please comment this:
 ```python
+links = []
+for i in range(26):
+    url = 'http://example.webscraping.com/places/default/index/' + str(i)
+    response = requests.get(url)
+    print(response)
+    if response.ok:
+        print('Page:' + str(i))
+        soup = BeautifulSoup(response.text, 'lxml')
+        tds = soup.findAll('td')
+        for td in tds:
+            a = td.find('a')
+            link = a['href']
+            links.append('http://example.webscraping.com' + link)
+        time.sleep(2)
+
+print(len(links))
 with open('urls.txt', 'w') as file:
     for link in links:
         file.write(link + "\n")
 ```
-after this you can now store all the data in .csv file and run this:
+GOOD 
+### now you can store all the data in .csv file by runing this:
 ```py
 with open('urls.txt', 'r') as inf:
     with open('pays.csv', 'w') as outf:
@@ -25,4 +41,4 @@ with open('urls.txt', 'r') as inf:
                 outf.write(country.text + ',' + '\t' + '\t' + '\t' + pop.text.replace(',', '') + '\n')
             time.sleep(1)
 ```
-If you like it STAR it ⭐️
+## If you like it STAR it ⭐️
