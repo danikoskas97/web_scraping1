@@ -47,6 +47,7 @@ with open('urls.txt', 'w') as file:
 '''
 
 '''
+
 # url = 'http://example.webscraping.com/places/default/view/Yemen-250'
 with open('urls.txt', 'r') as inf:
     with open('pays.csv', 'w') as outf:
