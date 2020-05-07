@@ -1,6 +1,6 @@
 ## Web scraping first project 🚀
 
-you just need to uncomment only the code and run in the IDE or Terminal.
+you just need to uncomment only the code to delete urls.txt and run in the IDE or Terminal.
 i use pycharm so the .txt will be created in the folder that you work on it.
 after you run please comment:
 
