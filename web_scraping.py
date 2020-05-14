@@ -1,17 +1,20 @@
 import requests
 from bs4 import BeautifulSoup
-import lxml
 import time
 __doc__
 # source : http://example.webscraping.com/
 # learned and apply with an youtube video
 '''
 example: 
-soup = BeautifulSoup(response.text, 'lxml') 
-title = soup.find('title') => find the element and whats in
+url = 'your url'
+response = requests.get(url)
+print(response) => to see if you have a response like 200 or 400  
+soup = BeautifulSoup(response.text, 'lxml') => parser חייב להשתמש ב 'lxml' כמו פה לדוגמה הדרנו
+print(soup) => מראה את כל מה שנמצא בדף את כל הקוד עם התגייות 
+title = soup.find('title') => find first title tag in the html file  
 print(title) => give the <title>blablabla</title>
-print(title.text) => give only the content of html element
-tds = soup.findAll('td') => give all the td 
+print(title.text) => give only the content of html element so only blablabla
+tds = soup.findAll('td') => give all the td item in the actual html page
 print(len(tds)) => give the number of td element in the html file
 '''
 # <td>
