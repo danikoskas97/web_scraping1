@@ -25,7 +25,7 @@ with open('urls.txt', 'w') as file:
         file.write(link + "\n")
 ```
 GOOD 
-### now you can store all the data in .csv file by runing this:
+### now you can store all the data in a .csv file by running this:
 ```py
 with open('urls.txt', 'r') as inf:
     with open('pays.csv', 'w') as outf:
